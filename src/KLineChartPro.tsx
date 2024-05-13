@@ -16,7 +16,7 @@ import { render } from 'solid-js/web'
 
 import { utils, Nullable, DeepPartial, Styles } from 'klinecharts'
 
-import ChartProComponent from './ChartProComponent'
+import ChartProComponent, { widget } from "./ChartProComponent";
 
 import { SymbolInfo, Period, ChartPro, ChartProOptions } from './types'
 
@@ -127,5 +127,13 @@ export default class KLineChartPro implements ChartPro {
 
   getPeriod (): Period {
     return this._chartApi!.getPeriod()
+  }
+
+  getChartApi () {
+    return this._chartApi
+  }
+
+  getInstance () {
+    return widget
   }
 }
