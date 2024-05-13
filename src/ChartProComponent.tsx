@@ -65,9 +65,10 @@ function createIndicator (widget: Nullable<Chart>, indicatorName: string, isStac
   }, isStack, paneOptions) ?? null
 }
 
+export let widget: Nullable<Chart> = null;
+
 const ChartProComponent: Component<ChartProComponentProps> = props => {
   let widgetRef: HTMLDivElement | undefined = undefined
-  let widget: Nullable<Chart> = null
 
   let priceUnitDom: HTMLElement
 
